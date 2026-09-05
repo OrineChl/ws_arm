@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.8)
+project(custom_4dof_description)
+find_package(ament_cmake REQUIRED)
+install(DIRECTORY urdf launch rviz config docs DESTINATION share/${PROJECT_NAME})
+install(FILES README.md DESTINATION share/${PROJECT_NAME})
+install(PROGRAMS scripts/verify_zero_pose.py DESTINATION lib/${PROJECT_NAME})
+ament_package()

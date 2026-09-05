@@ -1,0 +1,50 @@
+# Engineering metadata; not a ROS node parameter file.
+# Kinematic lengths are maintained in Xacro properties; keep this record in sync.
+units: {length: m, angle: rad}
+model_scope: visualization-only
+link_dimensions:
+  j1_to_j2_z: 0.161
+  j2_to_j3_z: 0.191
+  j3_to_j4_x: 0.172
+  tcp:
+    x: 0.092
+    z: 0.020
+    status: provisional
+    source: engineering_drawing_estimate
+    calibrated: false
+coordinates:
+  drawing_D:
+    origin: J1 axis intersection with base bottom plane
+    x: drawing_left
+    y: drawing_up
+    z: into_drawing
+  ros_B:
+    origin: same_as_D
+    x: +X_D
+    y: -Z_D
+    z: +Y_D
+    mapping: [x_B=x_D, y_B=-z_D, z_B=y_D]
+    convention: REP-103_right_handed_z_up
+joint_axes_local:
+  joint1: [0, 0, 1]
+  joint2: [0, -1, 0]
+  joint3: [0, -1, 0]
+  joint4: [0, -1, 0]
+zero_pose:
+  definition: engineering_drawing_pose
+  joint_angles: {joint1: 0, joint2: 0, joint3: 0, joint4: 0}
+  positions_in_base_link:
+    link1: [0, 0, 0]
+    link2: [0, 0, 0.161]
+    link3: [0, 0, 0.352]
+    link4: [0.172, 0, 0.352]
+    tool0: [0.172, 0, 0.352]
+    tcp: [0.264, 0, 0.372]
+unknown_parameters:
+  joint_position_limits: null
+  joint_velocity_limits: null
+  joint_effort_limits: null
+  masses: null
+  centers_of_mass: null
+  inertia_tensors: null
+  status: unknown_do_not_use_for_simulation_or_control

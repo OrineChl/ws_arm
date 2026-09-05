@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <material name="base_gray"><color rgba="0.25 0.28 0.32 1"/></material>
+  <material name="arm_blue"><color rgba="0.15 0.45 0.85 1"/></material>
+  <material name="elbow_orange"><color rgba="0.95 0.45 0.10 1"/></material>
+  <material name="wrist_green"><color rgba="0.2 0.7 0.35 1"/></material>
+</robot>
