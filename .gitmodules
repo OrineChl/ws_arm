@@ -1,0 +1,3 @@
+[submodule "ws_arm_base"]
+	path = ws_arm_base
+	url = https://github.com/OrineChl/ws_arm_base.git
