@@ -8,14 +8,14 @@ from launch_ros.substitutions import FindPackageShare
 
 
 def generate_launch_description():
-    share = FindPackageShare('custom_4dof_description')
+    share = FindPackageShare('custom_3dof_description')
     model = LaunchConfiguration('model')
     use_gui = LaunchConfiguration('use_gui')
     description = ParameterValue(Command([FindExecutable(name='xacro'), ' "', model, '"']), value_type=str)
     return LaunchDescription([
         DeclareLaunchArgument('use_gui', default_value='true'),
-        DeclareLaunchArgument('model', default_value=PathJoinSubstitution([share, 'urdf', 'custom_4dof.urdf.xacro'])),
-        DeclareLaunchArgument('rviz_config', default_value=PathJoinSubstitution([share, 'rviz', 'custom_4dof.rviz'])),
+        DeclareLaunchArgument('model', default_value=PathJoinSubstitution([share, 'urdf', 'custom_3dof.urdf.xacro'])),
+        DeclareLaunchArgument('rviz_config', default_value=PathJoinSubstitution([share, 'rviz', 'custom_3dof.rviz'])),
         Node(package='robot_state_publisher', executable='robot_state_publisher',
              parameters=[{'robot_description': description}], output='screen'),
         Node(package='joint_state_publisher_gui', executable='joint_state_publisher_gui',

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(custom_4dof_description)
+project(custom_3dof_description)
 find_package(ament_cmake REQUIRED)
 install(DIRECTORY urdf launch rviz config docs DESTINATION share/${PROJECT_NAME})
 install(FILES README.md DESTINATION share/${PROJECT_NAME})

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>custom_4dof_description</name>
+  <name>custom_3dof_description</name>
   <version>0.1.0</version>
   <description>Visualization-only description of a custom four-axis arm.</description>
   <maintainer email="maintainer@example.com">Custom arm maintainer</maintainer>
